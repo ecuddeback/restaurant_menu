@@ -1,0 +1,105 @@
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: #faf7f2;
+    color: #333;
+}
+
+main {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background: #e3d5ca;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 0.25rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+/* MENU */
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1 fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.item {
+    margin-bottom: 1rem;
+}
+
+.item h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin: 0.25rem 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #d4a373;
+}
+
+/* FOOTER */
+
+footer {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Queries */
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 2rem; 
+    }
+
+    h2 {
+        font-size: 1.25rem; 
+    }
+
+    .menu {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    header, footer {
+        background: none;
+        color: black;
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+    }
+
+    .menu {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    buttom, a {
+        display: none;
+    }
+}
